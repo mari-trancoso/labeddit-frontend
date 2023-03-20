@@ -1,5 +1,5 @@
 export const goToLoginPage = (navigator) => {
-    navigate(`/`)
+    navigator(`/`)
 }
 
 export const goToSignupPage = (navigator) => {
@@ -11,5 +11,5 @@ export const goToPostsPage = (navigator) => {
 }
 
 export const goToCommentsPage = (navigator) => {
-    navigator(`/comments/${id}`)
+    navigator(`/comments/:id`)
 }
