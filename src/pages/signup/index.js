@@ -19,13 +19,13 @@ const SignUpPage = () => {
   const [password, setPassword] = useState('')
   const [nickname, setNickname] = useState('')
 
+  const signup = async () => {
 
-  const body = {
-    nickname: nickname,
-    email: email,
-    password: password}
+    const body = {
+      nickname: nickname,
+      email: email,
+      password: password}
 
-  const signup = async (body) => {
     try{
       const response = await axios.post(`${BASE_URL}/users/signup`, body)
       localStorage.setItem('token', response.data.token)
@@ -61,7 +61,7 @@ const SignUpPage = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
       </FormControl>
-      <Button onClick={() => signup(body)}>Cadastrar</Button>
+      <Button onClick={() => signup()}>Cadastrar</Button>
     </>
     
   )
