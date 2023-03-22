@@ -94,7 +94,7 @@ const PostsPage = () => {
             <p>Enviado por: {post.creator.nickname}</p>
             <ul>{post.content}</ul>
             <ul>{post.comments}</ul>
-            <Button onClick={() => goToCommentsPage(navigate)}><img src={commentsIcon} /></Button>
+            <Button onClick={() => goToCommentsPage(navigate, post.id)}><img src={commentsIcon} /></Button>
             <ul>{post.likes}</ul>
             <Button onClick={()=>likeOrDislikePost(post.id, true)}><img src={likeIcon} /></Button>
             <Button onClick={()=>likeOrDislikePost(post.id, false)}><img src={dislikeIcon} /></Button>
